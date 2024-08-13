@@ -1,0 +1,30 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.blog {
+    padding: 2rem 0 6rem 0;
+    &__card {
+        @include evenGrid(auto, 1rem);
+        width: 100%;
+        justify-items: start;
+        padding-left: 13rem;
+        padding-right: 21rem;
+        h3 {
+            font-size: 1.5rem;
+        }
+        img {
+            border-radius: 2rem;
+        }
+
+    }
+
+}
+
+@include mediaQuery(520px) {
+    .blog {
+        &__card {
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}

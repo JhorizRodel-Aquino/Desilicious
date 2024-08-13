@@ -27,12 +27,21 @@ $alignments: center, right, left, justify;
   }
 }
 
-@for $i from 0 through 20 {
+@for $i from 0 through 50 {
   .mb--#{$i} {
     margin-bottom: $i + rem;
   }
   .mt--#{$i} {
     margin-top: $i + rem;
+  }
+  .ml--#{$i} {
+    margin-left: $i + rem;
+  }
+  .mr--#{$i} {
+    margin-right: $i + rem;
+  }
+  .my--#{$i} {
+    margin: $i + rem 0;
   }
   .pb--#{$i} {
     padding-bottom: $i + rem;
@@ -40,7 +49,19 @@ $alignments: center, right, left, justify;
   .pt--#{$i} {
     padding-top: $i + rem;
   }
+  .pl--#{$i} {
+    padding-left: $i + rem;
+  }
+  .pr--#{$i} {
+    padding-right: $i + rem;
+  }
   .py--#{$i} {
     padding: $i + rem 0;
+  }
+}
+
+@for $i from 1 through 5 {
+  .gc--#{$i} {
+    grid-column: span + $i;
   }
 }

@@ -49,4 +49,15 @@
       color: $clr--secondary;
     }
   }
+  &.bg--cart {
+    background-color: transparent;
+    border-radius: 2rem;
+    color: $clr--light;
+    border: 1px solid $clr--secondary;
+    font-weight: 100;
+    &:hover {
+      background-color: $clr--light;
+      color: $clr--secondary;
+    }
+  }
 }

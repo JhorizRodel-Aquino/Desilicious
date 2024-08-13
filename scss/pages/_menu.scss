@@ -40,3 +40,11 @@
     margin-top: 2rem;
   }
 }
+
+@include mediaQuery(520px) {
+  .menuList {
+    &__wrapper {
+      @include evenGrid(1, 1rem);
+    }
+  }
+}

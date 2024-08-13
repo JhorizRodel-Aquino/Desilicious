@@ -154,67 +154,100 @@
 }
 
 .testimonial {
-    &__wrapper {
-        @include centerAll;
-        max-width: 70rem;
-        margin: 0 auto;
+  &__wrapper {
+    @include centerAll;
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+
+  &__clients {
+    i {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      border: 1px solid $clr--secondary;
+      padding: 1.5rem;
+      border-radius: 50%;
+    }
+    p {
+      margin-bottom: 1rem;
     }
 
-    &__clients {
-        i {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            border: 1px solid $clr--secondary;
-            padding: 1.5rem;
-            border-radius: 50%;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-
-        h5 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: $clr--secondary;
-        }
-
-        small {
-            font-weight: 600;
-        }
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $clr--secondary;
     }
+
+    small {
+      font-weight: 600;
+    }
+  }
 }
 
 .video {
-    padding: 5rem 0;
-    &__wrapper {
-        @include centerAll;
-    }
+  padding: 5rem 0;
+  &__wrapper {
+    @include centerAll;
+  }
 }
 
 .homeBlog {
-    &__title {
-        text-align: center;
-        max-width: 30rem;
-        margin: 0 auto;
-        margin-bottom: 2rem;
-        h2 {
-            font-size: 2.5rem;
-            font-family: $font-secondary;
-        }
+  &__title {
+    text-align: center;
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    h2 {
+      font-size: 2.5rem;
+      font-family: $font-secondary;
     }
+  }
+  &__wrapper {
+    @include evenGrid(3, 5rem);
+  }
+  &__card {
+    img {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      &:hover {
+        color: $clr--secondary;
+      }
+    }
+  }
+}
+
+@include mediaQuery(520px) {
+  .homeMenu {
     &__wrapper {
-        @include evenGrid(3, 5rem)
+      @include evenGrid(1, 0);
     }
-    &__card {
-        img {
-            margin-bottom: 2rem;
-        }
-        h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            &:hover {
-                color: $clr--secondary;
-            }
-        }
+  }
+  .homeMenuList {
+    &__wrapper {
+      @include evenGrid(1, 0);
     }
+  }
+  .bat {
+    padding: 0 0 10rem 0;
+    &__wrapper {
+      background-image: none;
+      height: 100%;
+    }
+    &__table {
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      input {
+        width: 96%;
+      }
+    }
+  }
+  .homeBlog {
+    &__wrapper {
+      @include evenGrid(1, 5rem);
+    }
+  }
 }
